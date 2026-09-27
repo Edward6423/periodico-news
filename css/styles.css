@@ -1,0 +1,105 @@
+/* ==========================================================================
+   styles.css — Estilos personalizados de Periódico News
+   Bootstrap 5 aporta la rejilla y los componentes base; aquí se definen
+   la identidad visual (colores, tipografía) y los ajustes propios.
+   ========================================================================== */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+  --pn-primario: #0f2a4a;      /* Azul periódico (header, botones) */
+  --pn-acento: #f5b301;        /* Amarillo de acento */
+  --pn-fondo: #f6f7f9;         /* Fondo general */
+  --pn-texto: #1f2937;
+  --pn-educacion: #16a34a;
+  --pn-tecnologia: #2563eb;
+  --pn-turismo: #ea580c;
+  --pn-comercio: #9333ea;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--pn-fondo);
+  color: var(--pn-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main { flex: 1; }
+h1, h2, .navbar-brand { font-family: "Merriweather", Georgia, serif; }
+
+/* ---------- Header ---------- */
+.bg-periodico { background: var(--pn-primario); }
+.navbar .nav-link { font-weight: 500; }
+.navbar .nav-link.active { color: var(--pn-acento) !important; }
+
+/* ---------- Botones ---------- */
+.btn-primary { background: var(--pn-primario); border-color: var(--pn-primario); }
+.btn-primary:hover, .btn-primary:focus { background: #173d69; border-color: #173d69; }
+.btn-acento { background: var(--pn-acento); color: #111; font-weight: 600; }
+.btn-acento:hover { background: #ffc629; color: #111; }
+
+/* ---------- Sección de bienvenida (hero) ---------- */
+.hero {
+  background: linear-gradient(120deg, rgba(15, 42, 74, .95), rgba(37, 99, 235, .85)),
+              url("../img/tecnologia-1.svg") center / cover;
+  color: #fff;
+  padding: 5rem 0;
+}
+.hero .lead { max-width: 640px; }
+
+/* Encabezado de páginas internas */
+.encabezado-pagina {
+  background: var(--pn-primario);
+  color: #fff;
+  padding: 2.5rem 0;
+}
+
+/* ---------- Tarjetas de noticias ---------- */
+.card-noticia { border: 0; border-radius: .75rem; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.card-noticia:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .12) !important; }
+.card-noticia .card-img-top { aspect-ratio: 16 / 9; object-fit: cover; }
+.card-noticia .card-title { font-family: "Merriweather", Georgia, serif; line-height: 1.35; }
+
+/* Botón de estrella (favoritos) */
+.btn-fav { color: #9ca3af; border: 0; padding: .1rem .35rem; font-size: 1.15rem; }
+.btn-fav:hover, .btn-fav.activo { color: var(--pn-acento); }
+
+/* Colores de categoría */
+.badge-educacion { background: var(--pn-educacion); }
+.badge-tecnologia { background: var(--pn-tecnologia); }
+.badge-turismo { background: var(--pn-turismo); }
+.badge-comercio { background: var(--pn-comercio); }
+
+/* ---------- Llamado a la acción ---------- */
+.cta { background: #e8edf5; border-radius: 1rem; }
+
+/* ---------- Testimonios ---------- */
+.testimonio { border-left: 4px solid var(--pn-acento); background: #fff; border-radius: .5rem; }
+
+/* ---------- Detalle de noticia ---------- */
+.detalle-imagen { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; border-radius: 1rem; }
+.detalle-contenido p { font-size: 1.08rem; line-height: 1.8; }
+
+/* ---------- Categorías ---------- */
+.card-categoria { border: 0; border-radius: 1rem; overflow: hidden; color: #fff; min-height: 200px; }
+.card-categoria img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card-categoria .capa { position: relative; background: linear-gradient(transparent, rgba(0, 0, 0, .65)); height: 100%; }
+
+/* ---------- Formularios ---------- */
+.form-control:focus, .form-select:focus { border-color: var(--pn-primario); box-shadow: 0 0 0 .2rem rgba(15, 42, 74, .2); }
+
+/* ---------- Footer ---------- */
+.footer-periodico { background: #0b1f37; color: #cbd5e1; }
+.footer-periodico a { color: #cbd5e1; text-decoration: none; }
+.footer-periodico a:hover { color: var(--pn-acento); }
+
+/* ---------- Paginación ---------- */
+.pagination .page-link { color: var(--pn-primario); }
+.pagination .active > .page-link { background: var(--pn-primario); border-color: var(--pn-primario); color: #fff; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0; }
+  .hero h1 { font-size: 1.9rem; }
+}
