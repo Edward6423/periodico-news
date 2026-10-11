@@ -1,0 +1,31 @@
+<section class="encabezado-pagina">
+  <div class="container">
+    <h1 class="h2 fw-bold mb-1">Categorías</h1>
+    <p class="mb-0 opacity-75">Elige un tema y encuentra las noticias que te interesan.</p>
+  </div>
+</section>
+
+<section class="container py-5">
+  @if (servicio.cargando()) {
+    <div class="text-center py-5"><div class="spinner-border text-primary" role="status"></div></div>
+  } @else if (servicio.error()) {
+    <div class="alert alert-danger">{{ servicio.error() }}</div>
+  } @else {
+    <div class="row g-4">
+      @for (c of tarjetas(); track c.nombre) {
+        <div class="col-sm-6 col-lg-3">
+          <a routerLink="/noticias" [queryParams]="{ categoria: c.nombre }" class="text-decoration-none">
+            <div class="card card-categoria position-relative shadow-sm h-100">
+              <img [src]="c.imagen" alt="" />
+              <div class="capa d-flex flex-column justify-content-end p-4">
+                <h2 class="h4 fw-bold mb-1">{{ c.nombre }}</h2>
+                <p class="small mb-2">{{ c.descripcion }}</p>
+                <span class="badge bg-light text-dark align-self-start">{{ c.total }} noticia(s)</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      }
+    </div>
+  }
+</section>

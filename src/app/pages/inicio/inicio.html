@@ -1,0 +1,66 @@
+<!-- ===== Sección de bienvenida ===== -->
+<section class="hero"
+  style="background: linear-gradient(120deg, rgba(15, 42, 74, .95), rgba(37, 99, 235, .85)), url(img/tecnologia-1.svg) center / cover">
+  <div class="container">
+    <span class="badge bg-warning text-dark mb-3">Periódico digital</span>
+    <h1 class="display-5 fw-bold">Mantente informado, al instante</h1>
+    <p class="lead my-4">
+      Noticias de educación, tecnología, turismo y comercio en un solo lugar. Explora, lee a fondo y
+      guarda las que más te interesen.
+    </p>
+    <div class="d-flex flex-wrap gap-2">
+      <a routerLink="/noticias" class="btn btn-acento btn-lg"><i class="bi bi-compass me-1"></i>Explorar noticias</a>
+      <a routerLink="/categorias" class="btn btn-outline-light btn-lg">Ver categorías</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Noticias destacadas (signal "destacadas" del servicio) ===== -->
+<section class="container py-5">
+  <div class="d-flex justify-content-between align-items-end mb-4">
+    <h2 class="h3 fw-bold mb-0">Noticias destacadas</h2>
+    <a routerLink="/noticias" class="link-primary">Ver todas <i class="bi bi-arrow-right"></i></a>
+  </div>
+
+  <div class="row g-4">
+    @if (servicio.cargando()) {
+      <div class="col-12 text-center py-5"><div class="spinner-border text-primary" role="status"></div></div>
+    } @else if (servicio.error()) {
+      <div class="col-12"><div class="alert alert-danger">{{ servicio.error() }}</div></div>
+    } @else {
+      @for (noticia of servicio.destacadas(); track noticia.id) {
+        <div class="col-sm-6 col-lg-4">
+          <app-noticia-card [noticia]="noticia" />
+        </div>
+      }
+    }
+  </div>
+</section>
+
+<!-- ===== Llamado a la acción ===== -->
+<section class="container">
+  <div class="cta p-4 p-md-5 text-center">
+    <h2 class="h3 fw-bold">¿Quieres estar al día?</h2>
+    <p class="text-secondary mb-4">Recorre el catálogo completo o escríbenos con tus comentarios y sugerencias.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <a routerLink="/noticias" class="btn btn-primary">Ver todas las noticias</a>
+      <a routerLink="/contacto" class="btn btn-outline-primary">Contáctanos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonios ===== -->
+<section class="container py-5">
+  <h2 class="h3 fw-bold mb-4 text-center">Lo que dicen nuestros lectores</h2>
+  <div class="row g-4">
+    @for (t of testimonios; track t.autor) {
+      <div class="col-md-4">
+        <blockquote class="testimonio p-4 shadow-sm h-100 mb-0">
+          <p class="mb-2">"{{ t.texto }}"</p>
+          <footer class="small text-muted">— {{ t.autor }}</footer>
+        </blockquote>
+      </div>
+    }
+  </div>
+  <p class="text-center text-muted small mt-3">Testimonios de ejemplo con fines académicos.</p>
+</section>

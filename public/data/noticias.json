@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "titulo": "Colegios públicos estrenan aulas de programación para estudiantes de secundaria",
+    "resumen": "Un nuevo programa de formación busca que los jóvenes aprendan a programar desde el aula.",
+    "contenido": "Varias instituciones educativas públicas pusieron en marcha aulas dotadas con computadores y conexión a internet, en las que los estudiantes de secundaria reciben clases semanales de pensamiento computacional y programación básica.\n\nLos docentes a cargo recibieron una capacitación previa de cuarenta horas y trabajan con proyectos prácticos, como el diseño de páginas web sencillas y pequeños juegos. Según los coordinadores del programa, el objetivo es que los jóvenes vean la tecnología como una herramienta para resolver problemas de su entorno y no solo como un medio de entretenimiento.\n\nLa iniciativa se evaluará al final del año escolar para decidir si se amplía a más sedes.",
+    "categoria": "Educación",
+    "imagen": "img/educacion-1.svg",
+    "autor": "Redacción Educación",
+    "fecha": "2026-09-22",
+    "destacada": true
+  },
+  {
+    "id": 2,
+    "titulo": "Inteligencia artificial en el trabajo: las habilidades que más piden las empresas",
+    "resumen": "El análisis de datos y el trabajo con herramientas de IA encabezan la lista de competencias solicitadas.",
+    "contenido": "Un sondeo realizado entre empresas de distintos sectores muestra que las competencias digitales ya no son exclusivas de los cargos técnicos. Las organizaciones valoran cada vez más a profesionales capaces de interpretar datos, automatizar tareas repetitivas y usar asistentes de inteligencia artificial de forma responsable.\n\nLos expertos consultados coinciden en que el pensamiento crítico sigue siendo indispensable: las herramientas producen resultados rápidamente, pero es la persona quien debe verificar, contextualizar y tomar decisiones.\n\nLa recomendación para quienes buscan empleo es combinar la formación técnica con habilidades de comunicación y trabajo en equipo.",
+    "categoria": "Tecnología",
+    "imagen": "img/tecnologia-1.svg",
+    "autor": "Redacción Tecnología",
+    "fecha": "2026-09-21",
+    "destacada": true
+  },
+  {
+    "id": 3,
+    "titulo": "El turismo de naturaleza crece en temporada de mitad de año",
+    "resumen": "Senderos, avistamiento de aves y parques naturales atraen cada vez más visitantes.",
+    "contenido": "Los operadores turísticos reportan un aumento en la demanda de planes de naturaleza durante la temporada de mitad de año. Las caminatas guiadas, el avistamiento de aves y las visitas a reservas naturales fueron los planes más solicitados.\n\nLas autoridades ambientales recuerdan la importancia de respetar la capacidad de carga de cada destino, no dejar residuos y contratar guías locales certificados, lo que además contribuye a la economía de las comunidades.\n\nPara la próxima temporada se espera la apertura de nuevos senderos señalizados.",
+    "categoria": "Turismo",
+    "imagen": "img/turismo-1.svg",
+    "autor": "Redacción Turismo",
+    "fecha": "2026-09-20",
+    "destacada": true
+  },
+  {
+    "id": 4,
+    "titulo": "Pequeños comercios apuestan por las ventas en línea",
+    "resumen": "Tiendas de barrio comienzan a usar catálogos digitales y pagos electrónicos.",
+    "contenido": "Cada vez más negocios de barrio publican sus productos en catálogos digitales y reciben pedidos por mensajería. Los comerciantes aseguran que esta estrategia les ha permitido llegar a clientes nuevos sin necesidad de abrir otro local.\n\nLos pagos electrónicos también ganan terreno: códigos QR y transferencias inmediatas reducen el manejo de efectivo y agilizan las entregas a domicilio.\n\nCámaras de comercio locales ofrecen talleres gratuitos para acompañar este proceso de transformación digital.",
+    "categoria": "Comercio",
+    "imagen": "img/comercio-1.svg",
+    "autor": "Redacción Economía",
+    "fecha": "2026-09-19",
+    "destacada": false
+  },
+  {
+    "id": 5,
+    "titulo": "Universidades amplían la oferta de cursos virtuales gratuitos",
+    "resumen": "Los cursos abiertos cubren temas como programación, idiomas y emprendimiento.",
+    "contenido": "Diversas universidades anunciaron la ampliación de su oferta de cursos virtuales abiertos y gratuitos. Los programas pueden tomarse a ritmo propio y algunos otorgan constancias de participación.\n\nEntre los temas más populares se encuentran el desarrollo web, el inglés para el trabajo y la creación de empresas. Las instituciones señalan que esta modalidad permite llegar a personas que viven lejos de las ciudades o que trabajan en horarios extensos.\n\nLas inscripciones permanecen abiertas durante todo el semestre.",
+    "categoria": "Educación",
+    "imagen": "img/educacion-2.svg",
+    "autor": "Redacción Educación",
+    "fecha": "2026-09-18",
+    "destacada": false
+  },
+  {
+    "id": 6,
+    "titulo": "Cómo proteger tus cuentas con la verificación en dos pasos",
+    "resumen": "Una medida sencilla que reduce considerablemente el riesgo de robo de cuentas.",
+    "contenido": "La verificación en dos pasos agrega una capa extra de seguridad al inicio de sesión: además de la contraseña, se solicita un código temporal enviado al teléfono o generado por una aplicación.\n\nLos especialistas recomiendan activarla en el correo electrónico, las redes sociales y la banca en línea, ya que son los servicios más atacados. También aconsejan usar contraseñas diferentes para cada servicio y apoyarse en un gestor de contraseñas.\n\nActivar esta opción toma pocos minutos y está disponible en la configuración de seguridad de la mayoría de plataformas.",
+    "categoria": "Tecnología",
+    "imagen": "img/tecnologia-2.svg",
+    "autor": "Redacción Tecnología",
+    "fecha": "2026-09-17",
+    "destacada": false
+  },
+  {
+    "id": 7,
+    "titulo": "Rutas gastronómicas: una forma diferente de conocer los pueblos",
+    "resumen": "Recorridos que combinan cocina tradicional, mercados campesinos e historia local.",
+    "contenido": "Las rutas gastronómicas se consolidan como una alternativa para quienes quieren conocer los pueblos a través de su cocina. Los recorridos incluyen visitas a mercados campesinos, clases de cocina tradicional y degustaciones con productores locales.\n\nPara los municipios, este tipo de turismo representa una oportunidad para valorar su patrimonio culinario y generar ingresos para familias que se dedican a la agricultura y a la preparación de alimentos.\n\nSe recomienda reservar con anticipación, especialmente en fines de semana festivos.",
+    "categoria": "Turismo",
+    "imagen": "img/turismo-2.svg",
+    "autor": "Redacción Turismo",
+    "fecha": "2026-09-16",
+    "destacada": false
+  },
+  {
+    "id": 8,
+    "titulo": "Ferias de emprendimiento reúnen a cientos de negocios locales",
+    "resumen": "Emprendedores muestran sus productos y participan en ruedas de negocios.",
+    "contenido": "Durante el fin de semana se realizó una feria de emprendimiento en la que participaron negocios de alimentos, moda, artesanías y servicios digitales. Además de la exhibición de productos, se organizaron ruedas de negocios con compradores y charlas sobre financiación.\n\nLos organizadores destacaron que muchos de los participantes son jóvenes y mujeres cabeza de hogar que encontraron en el emprendimiento una fuente de ingresos estable.\n\nLa próxima edición se realizará al cierre del año.",
+    "categoria": "Comercio",
+    "imagen": "img/comercio-2.svg",
+    "autor": "Redacción Economía",
+    "fecha": "2026-09-15",
+    "destacada": false
+  },
+  {
+    "id": 9,
+    "titulo": "Bibliotecas públicas se transforman en centros de innovación",
+    "resumen": "Además de libros, ofrecen talleres de robótica, impresión 3D y alfabetización digital.",
+    "contenido": "Las bibliotecas públicas amplían sus servicios con espacios dedicados a la innovación. En ellos, niños, jóvenes y adultos pueden participar en talleres de robótica, impresión 3D, edición de video y alfabetización digital.\n\nLos bibliotecarios explican que el objetivo es que la biblioteca siga siendo un lugar de encuentro y aprendizaje para toda la comunidad, adaptado a las necesidades actuales.\n\nLa programación de talleres se publica mensualmente en las carteleras de cada sede.",
+    "categoria": "Educación",
+    "imagen": "img/educacion-3.svg",
+    "autor": "Redacción Educación",
+    "fecha": "2026-09-14",
+    "destacada": false
+  },
+  {
+    "id": 10,
+    "titulo": "Energía solar en casa: lo que debes saber antes de instalar paneles",
+    "resumen": "Costos, mantenimiento y ahorro esperado de los sistemas solares residenciales.",
+    "contenido": "La instalación de paneles solares en viviendas crece gracias a la reducción de costos de los equipos. Antes de dar el paso, los expertos recomiendan revisar el consumo mensual de energía, la orientación del techo y las horas de sol de la zona.\n\nEl mantenimiento es sencillo: limpieza periódica de los paneles y una revisión técnica anual del inversor. El ahorro depende del tamaño del sistema y de los hábitos de consumo del hogar.\n\nTambién es importante verificar la regulación local sobre la conexión a la red eléctrica.",
+    "categoria": "Tecnología",
+    "imagen": "img/tecnologia-3.svg",
+    "autor": "Redacción Tecnología",
+    "fecha": "2026-09-13",
+    "destacada": false
+  },
+  {
+    "id": 11,
+    "titulo": "Consejos para viajar con presupuesto ajustado",
+    "resumen": "Planear con anticipación y viajar en temporada baja son claves para ahorrar.",
+    "contenido": "Viajar no siempre requiere un gran presupuesto. Planear con tiempo, comparar precios de transporte y elegir fechas de temporada baja puede reducir de manera importante los costos.\n\nOtras recomendaciones incluyen hospedarse en alojamientos locales, comer en mercados y restaurantes tradicionales y aprovechar las actividades gratuitas de cada destino, como museos con entrada libre o caminatas urbanas.\n\nLlevar un registro de gastos durante el viaje ayuda a no salirse del presupuesto previsto.",
+    "categoria": "Turismo",
+    "imagen": "img/turismo-3.svg",
+    "autor": "Redacción Turismo",
+    "fecha": "2026-09-12",
+    "destacada": false
+  },
+  {
+    "id": 12,
+    "titulo": "El comercio electrónico impulsa nuevos empleos en logística",
+    "resumen": "Bodegas, reparto y atención al cliente concentran la mayor demanda de personal.",
+    "contenido": "El crecimiento de las compras por internet ha generado una mayor demanda de personal en actividades de logística: almacenamiento, alistamiento de pedidos, reparto de última milla y atención al cliente.\n\nLas empresas del sector buscan trabajadores con manejo básico de herramientas digitales, ya que el seguimiento de pedidos y la gestión de inventarios se realizan en plataformas en línea.\n\nCentros de formación ofrecen cursos cortos orientados a estos perfiles.",
+    "categoria": "Comercio",
+    "imagen": "img/comercio-3.svg",
+    "autor": "Redacción Economía",
+    "fecha": "2026-09-11",
+    "destacada": false
+  }
+]

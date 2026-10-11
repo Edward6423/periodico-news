@@ -1,0 +1,66 @@
+<section class="encabezado-pagina">
+  <div class="container">
+    <h1 class="h2 fw-bold mb-1">Contáctanos</h1>
+    <p class="mb-0 opacity-75">Escríbenos tus comentarios o sugerencias.</p>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-8">
+      @if (enviado()) {
+        <div class="alert alert-success" id="confirmacion" role="alert" tabindex="-1">
+          <i class="bi bi-check-circle-fill me-2"></i><strong>¡Gracias!</strong> Tu mensaje fue enviado. Te responderemos pronto.
+        </div>
+      }
+
+      <!-- [formGroup] enlaza el formulario HTML con el FormGroup del componente -->
+      <form [formGroup]="form" (ngSubmit)="enviar()" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo *</label>
+          <input id="nombre" type="text" class="form-control" formControlName="nombre" autocomplete="name"
+                 [class.is-invalid]="invalido('nombre')" [class.is-valid]="valido('nombre')" />
+          <div class="invalid-feedback">{{ error('nombre') }}</div>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico *</label>
+          <input id="correo" type="email" class="form-control" formControlName="correo" autocomplete="email"
+                 placeholder="nombre@ejemplo.com"
+                 [class.is-invalid]="invalido('correo')" [class.is-valid]="valido('correo')" />
+          <div class="invalid-feedback">{{ error('correo') }}</div>
+        </div>
+        <div class="mb-3">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input id="asunto" type="text" class="form-control" formControlName="asunto" maxlength="100" />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje *</label>
+          <textarea id="mensaje" class="form-control" rows="6" maxlength="1000" formControlName="mensaje"
+                    [class.is-invalid]="invalido('mensaje')" [class.is-valid]="valido('mensaje')"></textarea>
+          <div class="d-flex justify-content-between">
+            <div class="invalid-feedback d-block">{{ invalido('mensaje') ? error('mensaje') : '' }}</div>
+            <small class="text-muted ms-auto">{{ textoMensaje().length }}/1000</small>
+          </div>
+        </div>
+        <p class="small text-muted">Los campos marcados con * son obligatorios.</p>
+        <!-- mousedown evita que el blur del último campo mueva el botón justo antes del clic -->
+        <button type="submit" class="btn btn-primary btn-lg" (mousedown)="$event.preventDefault()"><i class="bi bi-send me-1"></i>Enviar mensaje</button>
+      </form>
+    </div>
+
+    <!-- Información de contacto visible -->
+    <aside class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h2 class="h5 fw-bold">Información de contacto</h2>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i>contacto&#64;periodiconews.com</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i>+57 601 000 0000</li>
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i>Bogotá, Colombia</li>
+            <li><i class="bi bi-clock me-2 text-primary"></i>Lunes a viernes, 8:00 a. m. – 5:00 p. m.</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

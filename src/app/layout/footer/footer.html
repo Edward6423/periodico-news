@@ -1,0 +1,36 @@
+<footer class="footer-periodico pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold">Periódico <span class="text-warning">News</span></h5>
+        <p class="small mb-3">Noticias de educación, tecnología, turismo y comercio, contadas de forma clara.</p>
+        <div class="d-flex gap-3 fs-5">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="fw-bold text-uppercase">Enlaces rápidos</h6>
+        <ul class="list-unstyled small">
+          @for (item of menu; track item.ruta) {
+            <li><a [routerLink]="item.ruta">{{ item.texto }}</a></li>
+          }
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="fw-bold text-uppercase">Contacto</h6>
+        <ul class="list-unstyled small">
+          <li><i class="bi bi-envelope me-2"></i>contacto&#64;periodiconews.com</li>
+          <li><i class="bi bi-telephone me-2"></i>+57 601 000 0000</li>
+          <li><i class="bi bi-geo-alt me-2"></i>Bogotá, Colombia</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary" />
+    <p class="text-center small mb-0">
+      &copy; {{ anio }} Periódico News · Proyecto académico del módulo Desarrollo Front-End · Hecho con Angular
+    </p>
+  </div>
+</footer>

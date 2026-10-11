@@ -1,0 +1,44 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-periodico sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" routerLink="/" (click)="cerrarMenu()">
+        <i class="bi bi-newspaper me-2"></i>Periódico <span class="text-warning">News</span>
+      </a>
+
+      <!-- Botón hamburguesa: event binding (click) + property binding [attr.aria-expanded] -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="menuPrincipal"
+        [attr.aria-expanded]="menuAbierto()"
+        aria-label="Abrir menú"
+        (click)="alternarMenu()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal" [class.show]="menuAbierto()">
+        <ul class="navbar-nav ms-auto">
+          <!-- @for recorre el arreglo MENU y genera cada enlace -->
+          @for (item of menu; track item.ruta) {
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="item.ruta"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: item.ruta === '/' }"
+                ariaCurrentWhenActive="page"
+                (click)="cerrarMenu()"
+              >
+                <i class="bi me-1" [class]="item.icono"></i>{{ item.texto }}
+                @if (item.ruta === '/favoritos' && favoritos.total() > 0) {
+                  <span class="badge rounded-pill bg-warning text-dark ms-1">{{ favoritos.total() }}</span>
+                }
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

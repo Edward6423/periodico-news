@@ -1,0 +1,63 @@
+<div class="container py-4">
+  <button type="button" class="btn btn-outline-secondary btn-sm mb-3" (click)="volver()">
+    <i class="bi bi-chevron-left"></i> Volver
+  </button>
+
+  @if (servicio.cargando()) {
+    <div class="text-center py-5"><div class="spinner-border text-primary" role="status"></div></div>
+  } @else if (servicio.error()) {
+    <div class="alert alert-danger">{{ servicio.error() }}</div>
+  } @else {
+    @if (noticia(); as n) {
+      <article>
+        <img [src]="n.imagen" alt="Imagen representativa de la noticia" class="detalle-imagen shadow-sm mb-4"
+             (error)="imagenPorDefecto($event)" />
+        <span class="badge mb-2" [class]="claseCategoria()">{{ n.categoria }}</span>
+        <h1 class="fw-bold mb-3">{{ n.titulo }}</h1>
+        <p class="text-muted border-bottom pb-3">
+          <i class="bi bi-person me-1"></i>{{ n.autor }}
+          <span class="mx-2">·</span><i class="bi bi-calendar3 me-1"></i>{{ n.fecha | fechaLarga }}
+        </p>
+        <p class="lead">{{ n.resumen }}</p>
+        <div class="detalle-contenido">
+          @for (p of parrafos(); track $index) {
+            <p>{{ p }}</p>
+          }
+        </div>
+
+        <div class="row g-3 mt-3">
+          <div class="col-md-6 d-grid">
+            <!-- El estilo y el texto del botón dependen de la señal esFavorita() -->
+            <button type="button" class="btn btn-lg" [class.btn-warning]="esFavorita()" [class.btn-acento]="!esFavorita()"
+                    (click)="alternarFavorito()">
+              <i class="bi me-1" [class.bi-star-fill]="esFavorita()" [class.bi-star]="!esFavorita()"></i>
+              {{ esFavorita() ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+            </button>
+          </div>
+          <div class="col-md-6 d-grid">
+            <!-- queryParams envía el asunto precargado al formulario de contacto -->
+            <a class="btn btn-outline-primary btn-lg" routerLink="/contacto" [queryParams]="{ asunto: 'Sobre: ' + n.titulo }">
+              <i class="bi bi-envelope me-1"></i>Ir a contacto
+            </a>
+          </div>
+        </div>
+      </article>
+
+      @if (relacionadas().length) {
+        <section class="mt-5">
+          <h2 class="h4 fw-bold mb-3">Noticias relacionadas</h2>
+          <div class="row g-4">
+            @for (r of relacionadas(); track r.id) {
+              <div class="col-sm-6 col-lg-4"><app-noticia-card [noticia]="r" /></div>
+            }
+          </div>
+        </section>
+      }
+    } @else {
+      <div class="alert alert-warning">
+        La noticia solicitada no existe o fue eliminada.
+        <a routerLink="/noticias" class="alert-link">Ver todas las noticias</a>.
+      </div>
+    }
+  }
+</div>
