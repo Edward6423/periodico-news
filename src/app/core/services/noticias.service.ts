@@ -8,6 +8,13 @@ const RUTA_JSON = 'data/noticias.json';
 const CLAVE_CREADAS = 'pn_noticias_creadas';
 const CLAVE_ELIMINADAS = 'pn_noticias_eliminadas';
 
+/** Fecha de hoy en formato AAAA-MM-DD según la zona horaria del usuario. */
+function fechaLocalHoy(): string {
+  const hoy = new Date();
+  const dos = (n: number) => String(n).padStart(2, '0');
+  return `${hoy.getFullYear()}-${dos(hoy.getMonth() + 1)}-${dos(hoy.getDate())}`;
+}
+
 /**
  * NoticiasService
  * Fuente única de datos de la aplicación:
@@ -78,7 +85,7 @@ export class NoticiasService {
       categoria: datos.categoria,
       imagen: datos.imagen?.trim() || 'img/placeholder.svg',
       autor: datos.autor?.trim() || 'Usuario invitado',
-      fecha: new Date().toISOString().slice(0, 10),
+      fecha: fechaLocalHoy(),
       destacada: false,
       creadaPorUsuario: true,
     };
