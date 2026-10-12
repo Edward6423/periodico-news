@@ -3,9 +3,8 @@
 Plataforma web de noticias desarrollada para el módulo **Desarrollo de Front-End**.
 La versión final está construida con **Angular 20** (componentes standalone, enrutamiento, servicios, signals y formularios), **Bootstrap 5** y **TypeScript**.
 
-- **Aplicación desplegada:** https://USUARIO.github.io/periodico-news/
 - **Repositorio:** https://github.com/USUARIO/periodico-news
-- **Video explicativo:** https://youtu.be/ENLACE
+
 
 ## Funcionalidades
 
